@@ -1,0 +1,2 @@
+This project is for HanShunPing Sensei's Java Course learning pratise.Each profile are chapter Corresponding and separated.
+Due to learning progress, this project will be daily updated by StanleyShen0104.
