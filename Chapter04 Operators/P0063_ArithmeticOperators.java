@@ -26,6 +26,9 @@ public class P0063_ArithmeticOperators {
 			b = ++a, a self-increase first, then b = a
 			a++ == ++a
 			but if assignment b, there will be different
+			*self-increase may imply a force-convert
+			 byte a;
+			 a++ => a = byte(a + 1);
 		*/
 
 	}	
