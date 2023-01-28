@@ -3,7 +3,7 @@ Each profile are chapter corresponding and separated.
 Due to learning progress, this project will be daily updated by StanleyShen0104.
 
 ###Latested Progress###
-Latested Updated: 2023/01/27.
+Latested Updated: 2023/01/29.
 Start Date: 2023/01/22.
-Course Progress: 97 / 910.
-Estimated Days Remain: 55 Days.
+Course Progress: 114 / 910.
+Estimated Days Remain: 53 Days.
