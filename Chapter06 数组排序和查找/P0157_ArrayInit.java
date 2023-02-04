@@ -8,8 +8,11 @@ public class P0157_ArrayInit {
 		double[] scores2;//声明了一个null数组，没有分配内存空间
 		scores2 = new double[5];//给该数组分配了内存空间，才可以存放数据
 
-		//静态初始化
+		//静态初始化1
 		double[] scores3 = {1,2.0,3,4};//注意，静态初始化时输入的数据必须是可自动类型转换的
+
+		//静态初始化2
+		double[] scores4 = new double[]{1,2.0,3,4};//注意该用法中[]必须是空的
 
 		/*
 			可以放基本数据类型，也可以放引用类型。但同一个array中两者不能混用

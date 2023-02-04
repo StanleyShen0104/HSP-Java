@@ -5,5 +5,5 @@ Due to learning progress, this project will be daily updated by StanleyShen0104.
 ###Latested Progress###
 Latested Updated: 2023/02/05.
 Start Date: 2023/01/22.
-Course Progress: 182 / 910.
+Course Progress: 190 / 910.
 Estimated Days Remain: 55 Days.
