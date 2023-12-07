@@ -1,10 +1,22 @@
-java文件通过编译形成*.class文件。而*.class文件通过不同操作系统的JVM实现跨平台性
-Javaファイルはコンパイルされて*.classファイルが生成されます。そして、*.classファイルは異なるオペレーティングシステムのJVMによって、クロスプラットフォームの特性が実現されます
+Javaファイルはコンパイルされて、classファイルが生成されます。そして、classファイルは異なるオペレーティングシステムのJVMによって、クロスプラットフォームの特性が実現されます
 
-解释型语言的*.class文件需要用解释器来执行，编译型语言可以直接被执行，例如C、C++
-解釈型言語の*.classファイルは、解釈器を使用して実行する必要がありますが、コンパイル型言語は直接実行できます。例えば、C、C++などです
+解釈型言語のclassファイルは、解釈器を使用して実行する必要がありますが、コンパイル型言語は直接実行できます。例えば、C、C++などです
 
-编译命令 javac，运行命令 java
+コンパイル：javac
+実行：java
+JDK(java development kit)=JRE+java開発ツール
+JRE(java runtime enviroment)=JVM+javaコアクラスライブラリ
 
-JDK(java development kit)=JRE+java开发工具
-JRE(java runtime enviroment)=JVM+java核心类库
+//public 共有クラス
+public class hello{
+	//mainメソッドを記述して
+	public static void main(String[] args){
+		System.out.println("hello,world");
+	}
+}
+
+Java言語は大文字と小文字を区別します
+メソッドの各文の終了に「；」必要があります
+1つのファイルには1つだけのpublicクラスしか存在できない、かつファイルは同じ名前である必要があります
+複数の非publicクラスが存在でき、コンパイル後に複数のclassファイルが生成されます
+mainメソッドを非publicクラスに記述でき、プログラムのエントリーポイントは非publicクラス内のmainメソッドです
