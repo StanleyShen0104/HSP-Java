@@ -33,3 +33,17 @@ System.out.println("韩顺平教育\r\n北京");
 韩顺平教育
 北京
 シフト後に改行し、その後に置換します
+
+//単一行コメント
+/*	複数行コメント
+	複数行コメント	*/
+/**
+	* @author ドキュメンテーションコメント 1
+	* @version ドキュメンテーションコメント 2
+	* @... https://www.runoob.com/java/java-documentation.html
+*/
+
+Java ドキュメントの生成
+javadoc -d [save address] -[author] -[version] filename.java
+
+
