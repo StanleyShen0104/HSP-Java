@@ -30,7 +30,7 @@ a && b		and			部分判断
 a &  b		and			全部判断
 a || b		or			部分判断
 a |  b 		or			全部判断		
-!a			not
+!a 			not
 a ^  b		a,bは違う
 
 if(y = xx); 条件は代入のとき、結果は「y = xx」を代入してから、「y == True」を判断します
