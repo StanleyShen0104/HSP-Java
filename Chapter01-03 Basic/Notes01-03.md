@@ -131,3 +131,17 @@ charはintの定数值を保存できますが、変数はできません、強�
 char c1 = 100; ok
 int i = 1;
 char c2 = (char)i; ok 
+
+基本データ種別をStringに変換
+float f1 = 1.1F;
+String s1 = f1 + "";
+
+Stringを基本データ種別に変換
+Byte.parseByte("12");
+Short.parseShort("123");
+Long.parseLong("123");
+Integer.parseInt("123");
+Float.parseFloat("123.12");
+Double.parseDouble("123.12");
+Boolean.parseBoolean("true");
+charはできません
