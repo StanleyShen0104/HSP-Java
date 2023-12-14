@@ -65,6 +65,7 @@ Scanner XX = new Scanner(System.in);
 
 String name = XX.next();
 XX.nextInt()	XX.nextDouble()	XX.nextBoolean()...
+特別：char c1 = XX.next().charAt(0);
 
 2進数:「0b」を始め 0b1010
 8進数:「0」を始め 01010
