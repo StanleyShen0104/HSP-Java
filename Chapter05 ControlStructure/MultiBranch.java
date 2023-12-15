@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MultiBranch{
+public class MutiBranch{
 	public static void main(String[] args) {
 		//multi-branch
 		Scanner mysc = new Scanner(System.in);

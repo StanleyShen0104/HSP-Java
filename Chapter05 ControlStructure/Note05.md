@@ -34,3 +34,32 @@ switch (value) {
 }
 valueとconstXは同じデータ種別、あるいは自動的に変えるデータ種別
 valueは「byte, short, int, char, enum, String」のみ
+
+for循環：
+for (int i = 0; i < 10; i++) {	->statements運行終わってから、i++
+	statements...
+}
+
+for (int i = 0, j = 0; i < 10; i++, j +=2) {
+	statements...
+}
+
+int i = 0;
+for (; i < 10; ) {
+	statements...
+	i++;
+}
+
+for (; ; ) {
+	statements...	->無限循環
+}
+
+While循環：
+while (condition) {
+	statements...
+}
+
+Do-While循環：
+do{
+	statements...
+}while(condition); ->注意、運行してから判断します。そして、「;」は必要です
