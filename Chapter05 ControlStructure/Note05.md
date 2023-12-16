@@ -16,7 +16,8 @@ else if {
 else {
 	statements...
 }
-
+注意、Stringname == xx できません。Stringname.equals(xx) できます。
+しかし、一番いい書き方は：xx.equals(Stringname);
 ネスト分岐：ネスト分岐は3層を超えないように
 
 Switch-Case構造：
@@ -63,3 +64,17 @@ Do-While循環：
 do{
 	statements...
 }while(condition); ->注意、運行してから判断します。そして、「;」は必要です
+
+break, continue - label
+labelを宣言することで、break,continueが指定したLoop出ます
+label1:
+for(...){
+	label2:
+	for(...){
+		...
+		break; => break label2 
+		break label1; ->外のfor loop
+	}
+}
+
+Return:このメソッドを終了する。もしメソッドはmain()なら,プログラムは終了
