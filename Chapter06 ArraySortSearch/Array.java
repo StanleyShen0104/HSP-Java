@@ -3,7 +3,7 @@ public class Array {
 		//1 A-Z
 		char[] alpha = new char[26];
 		for (int i = 0; i < 26; i++  ) {
-			alpha[i] = (char)(i + 65);
+			alpha[i] = (char)(i + 'A');
 			System.out.print(alpha[i]);
 		}
 		

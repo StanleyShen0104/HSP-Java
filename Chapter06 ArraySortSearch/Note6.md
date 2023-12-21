@@ -23,3 +23,25 @@ double[] a = {1, 2, 3}; -> OK
 char \u000
 bool false
 string null
+
+アレイは相対引用です
+
+バブルソート：n個の要素に対しては、n-1回だけのLoopが十分です
+
+多次元アレイ：
+<1>
+double[][] xx = {{3, 5}, {1, 1}};
+double xx[][] = {{3, 5}, {1,1}};
+<2>
+double[][] xx = new double[length1][length2];
+<3>
+double[][] xx;
+...
+xx = new double[length1][length2];
+
+<4>内層アレイの長さが違いとき
+int[][] xx = new int[length1][　];　->内層アレイのメモリ空間はまだです
+for (int i = 0; i < xx.length; i++) {
+	xx[i] = new int[...];	->内層アレイのメモリ空間があり
+}
+
