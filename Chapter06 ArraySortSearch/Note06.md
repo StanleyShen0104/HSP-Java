@@ -10,6 +10,10 @@ double xx[]; ->名前あり、メモリ空間まだです
 ...
 xx = new double[length]; ->メモリ空間あり
 
+注意：
+double xx[] = new double[  ]{1.1, 1.2} -> ok
+double xx[] = new double[2]{1.1, 1.2} -> ダメ
+
 xx[index]; 訪問あるいは書き直します
 xx.length; arrayの長さ
 
@@ -31,7 +35,8 @@ string null
 多次元アレイ：
 <1>
 double[][] xx = {{3, 5}, {1, 1}};
-double xx[][] = {{3, 5}, {1,1}};
+double xx[][] = {{3, 5}, {1, 1}};
+double[] xx[] = {{3, 5}, {1, 1}}; ->一次元アレイと違います
 <2>
 double[][] xx = new double[length1][length2];
 <3>
@@ -44,4 +49,3 @@ int[][] xx = new int[length1][　];　->内層アレイのメモリ空間はま�
 for (int i = 0; i < xx.length; i++) {
 	xx[i] = new int[...];	->内層アレイのメモリ空間があり
 }
-
