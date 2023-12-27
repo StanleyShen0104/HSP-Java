@@ -1,13 +1,15 @@
-public class Maze{
+public class Maze {
 	public static void main(String[] args) {
 		MyMaze mm = new MyMaze();
-		int[][] map = mm.genMaze();
-		int[] start = {1, 1}; 
-		mm.stepMove(map, start);
+		mm.map = mm.genMaze();
+		mm.stepMove(mm.map, 1, 1);
+		mm.draw(mm.map);
 	}
 }
 
 class MyMaze {
+	int[][] map;
+	
 	public int[][] genMaze() {
 		int[][] m = new int[8][7];
 		for (int i = 0; i < m.length; i++) {
@@ -21,43 +23,57 @@ class MyMaze {
 				else {
 					m[i][j] = 0;
 				}
-				System.out.print(m[i][j] + " ");
 			}
-			System.out.println();
 		}
+		System.out.println("Map have already been generated.");
 		return m;
 	}
 	
-	public void draw(int[][] map, int[] pos) {
-		System.out.println("--------------");
-		for (int i = 0; i < map.length; i++) {
-			for (int j = 0; j < map[i].length; j++) {
-				if (pos[0] == i && pos[1] == j) {
-					System.out.print("* ");
+	
+	public boolean stepMove(int[][] map, int x, int y) {
+		/*	0 ready to go
+		 * 	1 blocked
+		 * 	2 good way
+		 * 	3 dead way 
+		*/
+		if (map[6][5] == 2) {
+			return true; //must be true; 
+		}
+		else {
+			//down right up left
+			if (map[x][y] == 0) {
+				map[x][y] = 2;
+				if (stepMove(map, x + 1, y)) {
+					return true;
+				}
+				else if (stepMove(map, x, y + 1)) {
+					return true;
+				}
+				else if (stepMove(map, x - 1, y)) {
+					return true;
+				}
+				else if (stepMove(map, x, y - 1)) {
+					return true;
 				}
 				else {
-					System.out.print(map[i][j] + " ");
+					map[x][y] = 3;
+					return false;
 				}
+			}
+			else {
+				return false;
+			}
+		}
+	}
+	
+	public void draw(int[][] map) {
+		System.out.println("---Solution---");
+		for (int i = 0; i < map.length; i++) {
+			for (int j = 0; j < map[i].length; j++) {
+				System.out.print(map[i][j] + " ");
 			}
 			System.out.println();
 		}
 	}
-	
-	public void stepMove(int[][] map, int[] pos) {
-		draw(map, pos);
-		if (pos[0] == 6 && pos[1] == 5) {
-			System.out.println("At last. Arrived!");
-		}
-		else {
-			if(map[pos[0] + 1][pos[1]] != 1) {
-				pos[0] += 1;
-			}
-			else if (map[pos[0]][pos[1] + 1] != 1) {
-				pos[1] += 1;
-			}
-			stepMove(map, pos);
-		}
-	}
-	
 	
 }
