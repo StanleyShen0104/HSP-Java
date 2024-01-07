@@ -110,8 +110,8 @@ class XX {
 		int b; b->uninitialize
 	}
 }
-
 グローバル変数はアクセス修飾子が使われ。ローカル変数そうではない
+
 
 コンストラクタ：构造器constructor
 Objectを生成の時に、自動的に引用されます
@@ -132,3 +132,38 @@ class Person {
 	}
 }
 
+注意、コンストラクタのオーバーロードもできます。
+定義のコンストラクタはデフォルトのを差し換えます。例えば
+public Dog(String name) {
+}
+...
+Dog d = new Dog(paras); 
+//parasは必要だ、non-paraのDog()は差し替えられました、もう使わなかった。
+//ならでは、再度オーバーロード
+
+メモリでObject作成プロセス：
+1）メソッド領域でClass情報の読み込み
+2）ヒープでアドレスとスベースを生成
+3）イニシャル：ディフォルト値を生成、属性値を代入
+4）イニシャル：定義のコンストラクタがあったら、値を代入
+5）アドレスをスタックでの変数にあげます
+
+thisは同じ名前のclass属性とローカル変数を区別でき
+public void print(String name, int age) {
+	this.name =name;
+	this.age = age;
+}
+
+コンストラクタconstructorを引用方：this(para)。
+コンストラクタ引用thisは、他のコンストラクタのオーバーロードを引用のみ
+コンストラクタ引用thisは、行頭に置かなければなりません
+
+class T {
+	public T() {
+		this("jack", 100);　//行頭
+		...
+	}
+	public T(String name, int age) {
+		System.out.print();
+	}
+}
