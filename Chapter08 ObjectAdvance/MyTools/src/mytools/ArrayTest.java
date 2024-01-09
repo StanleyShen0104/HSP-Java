@@ -1,7 +1,5 @@
 package mytools;
 
-import java.util.Scanner;
-
 public class ArrayTest {
 	public static void main(String[] args) {
 		int[] arr = { 1, 4, 2, 3, 7, 5, 6 };
@@ -17,11 +15,9 @@ class MyTools {
 			System.out.print(arr[i]);
 		}
 		System.out.println();
-
 	}
 
 	public void BubbleSort(int arr[]) {
-		Scanner mysc = new Scanner(System.in);
 		int temp = 0;
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = 1; j < arr.length - i; j++) {
@@ -34,6 +30,4 @@ class MyTools {
 		}
 		show(arr);
 	}
-	
 }
-
