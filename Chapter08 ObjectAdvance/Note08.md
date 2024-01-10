@@ -10,12 +10,12 @@ Alt + /: コード補完、模板補完、クラス導入
 Ctrl + Click: Method Source
 
 IDEAとEclipseと違うショートカットキー(default)：
-							Eclipse					IDEA						Recommend
-Auto Import：		Ctrl + Shift + O		Alt + Enter 			Alt + Enter 
+										Eclipse					IDEA						Recommend
+Auto Import：			Ctrl + Shift + O		Alt + Enter 				Alt + Enter 
 Auto Formatting：	Ctrl + Shift + F		Ctrl + Alt + L			Alt + L
-Run Program:		Ctrl + F11				Ctrl + Shift + F10	Alt + R
-Auto Constructor:	Alt + Shift + S		Alt + insert			Alt +insert
-Show Structures:	Ctrl + T					Ctrl + H					Ctrl + H
+Run Program:				Ctrl + F11				Ctrl + Shift + F10	Alt + R
+Auto Constructor:		Alt + Shift + S		Alt + insert				Alt + insert
+Show Structures:		Ctrl + T					Ctrl + H					Ctrl + H
 
 導入Package:
 package xxx.packname;
@@ -61,3 +61,24 @@ default:		自分、同じPackage
 属性をprivateする(外から修正られない)
 classでpublic setメソッド、private属性を修正と検証でき
 classでpublic getメソッド、private属性を読み込みでき
+
+インヘリタンス：继承(Inheritance)
+Subclass:サブクラス(子クラス)
+Superclass:スーパークラス(父クラス)
+SubclassはSuperclassから属性とメソッドをインヘリタンスする
+
+class XXX extends FatherName {
+}
+
+SubclassはSuperclassの訪問修飾子規則を適用：
+Superclassのpublic,protected属性とメソッドを直接に訪問でき
+
+SubclassとSuperclassコンストラクタの関係
+Subclassコンストラクタがあるか、ないかと問わず、Superclassコンストラクタも自動的に実行
+Superclass無パラメーターのコンストラクタがある場合、自動的に実行のはこれです
+Superclass無パラメーターのがない、でも他のがある場合、Subclassコンストラクタでsuper命令で目指す必要がある
+super()とthis()はコンストラクタの最初に置かなければなりません。だから、二つは同時に使えない
+ 
+
+
+
