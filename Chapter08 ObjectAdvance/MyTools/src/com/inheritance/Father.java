@@ -4,7 +4,8 @@ public class Father {
 	public String name;
 	public int age;
 	private double score;
-	private int aaa;
+	protected int aa;
+	int aaa;
 
 
 	public double getScore() {

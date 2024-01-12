@@ -5,18 +5,13 @@ import com.inheritance.improve.Child;
 class A {
 	int a;
 
-	public A() {
-		System.out.println("none");
-	}
-	public A(int a) {
-		System.out.println("have");
-	}
-	
 }
 
 class B extends A {
 	public B() {
-
+	}
+	public void aaa() {
+		int b = a;
 	}
 }
 

@@ -21,12 +21,6 @@ cat1.name = "abc";
 cat1.age = 5;
 cat1.color = "white";
 
-属性、四つアクセス修飾子：protected, public, (default), private
-訪問でき			class内部		子class		同じpackage		他のpackage
-public					Y					Y					Y						Y			
-protected				Y					Y					Y						N
-default					Y					N					Y						N
-private					Y					N					N						N
 
 栈 			スタック					基本変数を保存 
 堆 			ヒープ						引用変数を保存

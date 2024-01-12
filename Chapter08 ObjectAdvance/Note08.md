@@ -40,16 +40,17 @@ java.util		Scannerとか工具
 java.net		WEB開発
 java.awt		GUI画面開発
 
-訪問修飾子の復習：
-public:		全部でき
-private:		自分だけ
-protected:	自分、同じPackage、子Class
-default:		自分、同じPackage
+訪問修飾子の権限：
+					当前类	同包子类	同包其他类	不同包子类	不同包其他类
+private			---->
+default		-------------------------->
+protected	-------------------------------------->
+public			---------------------------------------------------->
 
-自分:					すべで
-同じpackage:		privateを除き
-他のpackage:		publicだけ
-子class:				public、protectedでき
+private:		自分だけでき
+default:		同じpackageででき
+protected:	同じpackage+違うpackageの子classででき
+public:			すべででき
 
 注意、classを声明とき、public、default使いだけ
 
@@ -70,14 +71,18 @@ SubclassはSuperclassから属性とメソッドをインヘリタンスする
 class XXX extends FatherName {
 }
 
-SubclassはSuperclassの訪問修飾子規則を適用：
-Superclassのpublic,protected属性とメソッドを直接に訪問でき
+SubclassはSuperclassの訪問修飾子規則を適用
 
 SubclassとSuperclassコンストラクタの関係
 Subclassコンストラクタがあるか、ないかと問わず、Superclassコンストラクタも自動的に実行
 Superclass無パラメーターのコンストラクタがある場合、自動的に実行のはこれです
 Superclass無パラメーターのがない、でも他のがある場合、Subclassコンストラクタでsuper命令で目指す必要がある
 super()とthis()はコンストラクタの最初に置かなければなりません。だから、二つは同時に使えない
+
+super()							//superclassのコンストラクタ
+super.属性　					//superclassの属性を訪問
+super.メソッド(paras)	//superclassのメソッドを訪問
+superはsuperclassのprivate属性とメソッドを訪問できない
  
 
 
