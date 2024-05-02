@@ -6,6 +6,7 @@ public class Father {
 	private double score;
 	protected int aa;
 	int aaa;
+	private int aaaa;
 
 
 	public double getScore() {
