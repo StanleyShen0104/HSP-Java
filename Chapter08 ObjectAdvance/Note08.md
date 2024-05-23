@@ -80,6 +80,7 @@ Subclassコンストラクタがあるか、ないかと問わず、Superclass�
 Superclass無パラメーターのコンストラクタがある場合、自動的に実行のはこれです
 Superclass無パラメーターのがない、でも他のがある場合、Subclassコンストラクタでsuper命令で目指す必要がある
 super()とthis()はコンストラクタの最初に置かなければなりません。だから、二つは同時に使えない
+PS:一句话，子类构造器里没有super和this，则默认调父类无参。有super则按照super参数调，有this则按照this参数去调本类其他构造器
 
 super()							//superclassの無パラメーターのコンストラクタ
 super(paras)					//superclassの有パラメーターのコンストラクタ

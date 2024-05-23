@@ -83,8 +83,8 @@ public int sum(int... nums) {
 
 パラメーターの種別はアレーもできますけど、ちょっと違う：
 int[] arr = {1, 2, 3};
-sum(arr);
-public int sum(int... nums) {
+len(arr);
+public int len(int... nums) {
 	System.out.println(nums.length); -> 「3」と表示し、「1」ではない
 }
 
